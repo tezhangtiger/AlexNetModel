@@ -20,11 +20,8 @@ inDataXdf="inData.xdf"
 rxImport(inData = inData, outFile = inDataXdf, stringsAsFactors=TRUE, overwrite = TRUE)
 inData=RxXdfData(inDataXdf)
 
-#import net definition string
-alexNetDef <- read_file("AlexNetFull.nn")
-
 #define formula
-form = label~.#your data here
+form = label~.
 
 #define optimizer
 sgdOptimizer = sgd(learningRate = 0.01, momentum = 0.9, weightDecay = 0.00005,
